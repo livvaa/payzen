@@ -11,6 +11,8 @@ Bu uygulama, kullanıcıların arasında doğrudan P2P (peer-to-peer) bağlantı
 
 ## Kurulum ve Çalıştırma
 
+### Geleneksel Yöntem
+
 Uygulamayı başlatmak için:
 
 ```bash
@@ -19,6 +21,25 @@ npm install
 
 # Uygulamayı çalıştırın
 npm run start-all
+```
+
+### Docker ile Çalıştırma
+
+Docker kullanarak uygulamayı çalıştırmak için:
+
+```bash
+# Docker imajını oluşturun ve çalıştırın
+docker-compose up
+
+# Arka planda çalıştırmak için
+docker-compose up -d
+```
+
+Docker olmadan sadece üretim ortamında çalıştırmak için:
+
+```bash
+docker build -t payzen-app .
+docker run -p 3000:3000 payzen-app
 ```
 
 ## Geliştirme
